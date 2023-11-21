@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TecniDev.Tools.Data.Models
 {
-    public class User
+    public class Role
     {
-        public long ID { get; set; }
+        public int ID { get; set; }
         public string? Name { get; set; }
-        public string? Password { get; set; }
-        public Role? Role { get; set; }
+        public string? Description { get; set; }
+        public List<User>? Users { get; set; }
     }
 }
