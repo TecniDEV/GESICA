@@ -8,6 +8,6 @@ namespace TecniDev.Tools.Data.Models
         public int ID { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
-        public List<User>? Users { get; set; }
+        public ICollection<User>? Users { get; set; }
     }
 }

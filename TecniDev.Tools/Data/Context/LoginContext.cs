@@ -16,9 +16,22 @@ namespace TecniDev.Tools.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .ToTable("users")
-                .HasIndex(u => u.ID);
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.ToTable("users");
+                entity.HasKey(e => e.ID);
+                entity.Property(e => e.Name).IsRequired().HasMaxLength(32);
+                entity.Property(e => e.Password).IsRequired().HasMaxLength(255);
+                entity.HasOne(e => e.Role).WithMany(r => r.Users);
+            });
+
+            modelBuilder.Entity<Role>(entity =>
+            {
+                entity.ToTable("roles");
+                entity.HasKey(e => e.ID);
+                entity.Property(e => e.Name).IsRequired().HasMaxLength(64);
+                entity.Property(e => e.Description).HasField("description");
+            });
         }
     }
 }
