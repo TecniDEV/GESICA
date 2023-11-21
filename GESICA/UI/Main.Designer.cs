@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             SuspendLayout();
             // 
-            // Form1
+            // Main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "Form1";
-            Text = "Form1";
+            BackColor = Color.FromArgb(64, 64, 64);
+            ClientSize = new Size(1006, 721);
+            Font = new Font("MesloLGL NF", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 4, 4, 4);
+            Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "GESICA";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             ResumeLayout(false);
         }

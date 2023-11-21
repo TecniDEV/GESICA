@@ -6,11 +6,38 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>GESICA.Program</StartupObject>
+    <Authors>Andrengineer</Authors>
+    <Company>TecniDEV</Company>
+    <Description>Gestor Empresarial Sistematizado de Información Contable y Administrativa</Description>
+    <PackageProjectUrl>https://tecni.dev</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/TecniDEV/GESICA</RepositoryUrl>
+    <Title>Sistema GESICA</Title>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Win32.SystemEvents" Version="8.0.0" />
     <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TecniDev.Tools\TecniDev.Tools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\Images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
