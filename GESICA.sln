@@ -8,7 +8,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GESICA", "GESICA\GESICA.csproj", "{6768A585-39FE-4446-88A1-640AC0949C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecniDev.Tools", "TecniDev.Tools\TecniDev.Tools.csproj", "{AC913AE5-11A3-4CEB-ADD0-425E09E3BCB2}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6768A585-39FE-4446-88A1-640AC0949C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6768A585-39FE-4446-88A1-640AC0949C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6768A585-39FE-4446-88A1-640AC0949C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6768A585-39FE-4446-88A1-640AC0949C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC913AE5-11A3-4CEB-ADD0-425E09E3BCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC913AE5-11A3-4CEB-ADD0-425E09E3BCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC913AE5-11A3-4CEB-ADD0-425E09E3BCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC913AE5-11A3-4CEB-ADD0-425E09E3BCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
