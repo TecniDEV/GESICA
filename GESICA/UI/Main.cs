@@ -1,5 +1,5 @@
-using TecniDev.Tools.Controllers;
-using TecniDev.Tools.Data.Models;
+using GESICA.UI;
+using TecniDev.Tools.Data;
 
 namespace GESICA
 {
@@ -12,10 +12,10 @@ namespace GESICA
 
         private void Main_Load(object sender, EventArgs e)
         {
-            LoginController controller = new();
-            foreach (var item in controller.GetRoles())
+            if (Session.User == null)
             {
-                MessageBox.Show(item.Name);
+                Login login = new Login();
+                login.ShowDialog();
             }
         }
     }

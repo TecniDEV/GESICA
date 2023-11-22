@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>True</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StartupObject>GESICA.Program</StartupObject>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+    <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <StartupObject></StartupObject>
     <Authors>Andrengineer</Authors>
     <Company>TecniDEV</Company>
     <Description>Gestor Empresarial Sistematizado de Información Contable y Administrativa</Description>
@@ -15,7 +17,12 @@
     <RepositoryUrl>https://github.com/TecniDEV/GESICA</RepositoryUrl>
     <Title>Sistema GESICA</Title>
     <PackageIcon>icon.png</PackageIcon>
+    <ApplicationIcon>Assets\Images\icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Images\icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\README.md">
