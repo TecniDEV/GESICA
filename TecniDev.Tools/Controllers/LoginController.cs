@@ -5,46 +5,62 @@ namespace TecniDev.Tools.Controllers
 {
     public class LoginController
     {
-        private readonly LoginContext Context = new();
-
         public LoginController() 
+        {
+            var Context = new LoginContext();
+            Context.Database.EnsureCreated();
+        }
+
+        public void AddUser(User user)
+        {
+            using var Context = new LoginContext();
+            Context.Users.Add(user);
+            Context.SaveChanges();
+            Context.Dispose();
+        }
+
+        public void RemoveUser(User user)
+        {
+            using var Context = new LoginContext();
+            Context.Users.Remove(user);
+            Context.SaveChanges();
+            Context.Dispose();
+        }
+
+        public void UpdateUser(User user) 
+        {
+            using var Context = new LoginContext();
+            Context.Users.Update(user);
+            Context.SaveChanges();
+            Context.Dispose();
+        }
+
+        public List<User> GetUsers() 
+        {
+            using var Context = new LoginContext();
+            return [.. Context.Users.ToList()];
+        }
+
+        public void AddRole(Role role) 
+        {
+            using var Context = new LoginContext();
+            Context.Roles.Add(role);
+            Context.SaveChanges();
+            Context.Dispose();
+        }
+
+        public void DeleteRole(Role role) 
         { 
-           Context.Database.EnsureCreated();
+            using var Context = new LoginContext();
+            Context.Roles.Remove(role);
+            Context.SaveChanges();
+            Context.Dispose();
         }
 
-        public void Add(User user)
+        public List<Role> GetRoles() 
         {
-            using (Context)
-            {
-                Context.Users.Add(user);
-                Context.SaveChanges();
-            }
-        }
-
-        public void Remove(User user)
-        {
-            using (Context)
-            {
-                Context.Users.Remove(user);
-                Context.SaveChanges();
-            }
-        }
-
-        public void Update(User user) 
-        { 
-            using (Context) 
-            {
-                Context.Users.Update(user);
-                Context.SaveChanges(); 
-            }
-        }
-
-        public ICollection<User> GetUsers() 
-        {
-            using(Context) 
-            {
-                return [.. Context.Users.ToList()];
-            }
+            using var Context = new LoginContext();
+            return [.. Context.Roles.ToList()];
         }
     }
 }

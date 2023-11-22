@@ -39,12 +39,12 @@
             ClientSize = new Size(1006, 721);
             Font = new Font("MesloLGL NF", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "GESICA";
             WindowState = FormWindowState.Maximized;
-            Load += Form1_Load;
+            Load += Main_Load;
             ResumeLayout(false);
         }
 

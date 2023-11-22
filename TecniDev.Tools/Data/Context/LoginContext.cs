@@ -9,10 +9,8 @@ namespace TecniDev.Tools.Data.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
 
-        string connectionString = ConfigurationManager.ConnectionStrings["Npsql"].ConnectionString;
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
-            => optionsBuilder.UseNpgsql(connectionString);
+            => optionsBuilder.UseNpgsql(ConfigurationManager.ConnectionStrings["Npsql"].ConnectionString);
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,7 +28,7 @@ namespace TecniDev.Tools.Data.Context
                 entity.ToTable("roles");
                 entity.HasKey(e => e.ID);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(64);
-                entity.Property(e => e.Description).HasField("description");
+                entity.Property(e => e.Description).HasColumnType("text");
             });
         }
     }

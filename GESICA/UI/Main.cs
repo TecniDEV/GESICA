@@ -1,3 +1,6 @@
+using TecniDev.Tools.Controllers;
+using TecniDev.Tools.Data.Models;
+
 namespace GESICA
 {
     public partial class Main : Form
@@ -7,9 +10,13 @@ namespace GESICA
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
-
+            LoginController controller = new();
+            foreach (var item in controller.GetRoles())
+            {
+                MessageBox.Show(item.Name);
+            }
         }
     }
 }
