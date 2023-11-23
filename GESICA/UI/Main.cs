@@ -1,5 +1,5 @@
 using GESICA.UI;
-using TecniDev.Tools.Data;
+using TecniDev.Tools.Helpers;
 
 namespace GESICA
 {
@@ -12,7 +12,7 @@ namespace GESICA
 
         private void Main_Load(object sender, EventArgs e)
         {
-            if (Session.User == null)
+            if (SessionHelper.User == null)
             {
                 Login login = new Login();
                 login.ShowDialog();

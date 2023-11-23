@@ -19,7 +19,7 @@ namespace TecniDev.Tools.Data.Context
                 entity.ToTable("users");
                 entity.HasKey(e => e.ID);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(32);
-                entity.Property(e => e.Password).IsRequired().HasMaxLength(255);
+                entity.Property(e => e.Password).IsRequired().HasMaxLength(128);
                 entity.HasOne(e => e.Role).WithMany(r => r.Users);
             });
 

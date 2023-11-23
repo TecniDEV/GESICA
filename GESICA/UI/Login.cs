@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TecniDev.Tools.Data;
+﻿using TecniDev.Tools.Controllers;
+using TecniDev.Tools.Helpers;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GESICA.UI
 {
@@ -36,13 +29,27 @@ namespace GESICA.UI
 
         private void ButtonLogin_Click(object sender, EventArgs? e)
         {
-            if (Session.Logged)
+            if (LoginController.Login(TextUser.Text, TextPassword.Text))
+            {
+                SessionHelper.Logged = true;
+                SessionHelper.User = TextUser.Text;
                 Close();
+            } else
+            {
+                SessionHelper.Logged = false;
+                MessageBox.Show("No se encontraron estas credenciales", "Error de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TextUser.Focus();
+            }
         }
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

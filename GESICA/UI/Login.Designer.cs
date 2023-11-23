@@ -139,6 +139,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ingreso";
+            Load += Login_Load;
             PanelLogin.ResumeLayout(false);
             GroupLogin.ResumeLayout(false);
             GroupLogin.PerformLayout();
