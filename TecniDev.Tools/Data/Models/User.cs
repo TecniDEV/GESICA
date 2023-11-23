@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace TecniDev.Tools.Data.Models
+﻿namespace TecniDev.Tools.Data.Models
 {
     public class User
     {

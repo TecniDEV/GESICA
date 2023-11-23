@@ -1,13 +1,15 @@
 ﻿using TecniDev.Tools.Controllers;
 using TecniDev.Tools.Helpers;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GESICA.UI
 {
     public partial class Login : Form
     {
+        UserController userController;
+
         public Login()
         {
+            userController = new UserController();
             InitializeComponent();
         }
 
@@ -29,7 +31,7 @@ namespace GESICA.UI
 
         private void ButtonLogin_Click(object sender, EventArgs? e)
         {
-            if (LoginController.Login(TextUser.Text, TextPassword.Text))
+            if (userController.Login(TextUser.Text, TextPassword.Text))
             {
                 SessionHelper.Logged = true;
                 SessionHelper.User = TextUser.Text;
@@ -37,7 +39,9 @@ namespace GESICA.UI
             } else
             {
                 SessionHelper.Logged = false;
-                MessageBox.Show("No se encontraron estas credenciales", "Error de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se encontraron estas credenciales", "Error de Ingreso", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error
+                );
                 TextUser.Focus();
             }
         }

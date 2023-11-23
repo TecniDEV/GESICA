@@ -4,7 +4,7 @@ using TecniDev.Tools.Data.Models;
 
 namespace TecniDev.Tools.Data.Context
 {
-    internal class LoginContext : DbContext
+    internal class UserContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
