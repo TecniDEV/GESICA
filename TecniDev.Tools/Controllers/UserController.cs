@@ -56,14 +56,6 @@ namespace TecniDev.Tools.Controllers
             Context.Dispose();
         }
 
-        public void DeleteRole(Role role) 
-        { 
-            using var Context = new UserContext();
-            Context.Roles.Remove(role);
-            Context.SaveChanges();
-            Context.Dispose();
-        }
-
         public List<Role> GetRoles() 
         {
             using var Context = new UserContext();

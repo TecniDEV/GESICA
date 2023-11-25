@@ -17,6 +17,7 @@ namespace GESICA.UI
         {
             if (e.KeyChar == ((char)Keys.Enter))
             {
+                TextPassword.SelectAll();
                 TextPassword.Focus();
             }
         }
@@ -36,12 +37,14 @@ namespace GESICA.UI
                 SessionHelper.Logged = true;
                 SessionHelper.User = TextUser.Text;
                 Close();
-            } else
+            }
+            else
             {
                 SessionHelper.Logged = false;
-                MessageBox.Show("No se encontraron estas credenciales", "Error de Ingreso", 
+                MessageBox.Show("No se encontraron estas credenciales", "Error de Ingreso",
                     MessageBoxButtons.OK, MessageBoxIcon.Error
                 );
+                TextUser.SelectAll();
                 TextUser.Focus();
             }
         }
@@ -49,11 +52,6 @@ namespace GESICA.UI
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
