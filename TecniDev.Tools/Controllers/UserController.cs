@@ -31,6 +31,7 @@ namespace TecniDev.Tools.Controllers
         public void UpdateUser(User user) 
         {
             using var Context = new UserContext();
+            Context.Entry(user).Property("UpdatedAt").CurrentValue = DateTime.Now;
             Context.Users.Update(user);
             Context.SaveChanges();
             Context.Dispose();
