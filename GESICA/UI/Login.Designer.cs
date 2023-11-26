@@ -50,7 +50,7 @@
             PanelLogin.Location = new Point(0, 0);
             PanelLogin.Margin = new Padding(2);
             PanelLogin.Name = "PanelLogin";
-            PanelLogin.Size = new Size(450, 253);
+            PanelLogin.Size = new Size(450, 250);
             PanelLogin.TabIndex = 0;
             // 
             // ButtonCancel
@@ -140,7 +140,7 @@
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(450, 253);
+            ClientSize = new Size(450, 250);
             Controls.Add(PanelLogin);
             Font = new Font("MesloLGS NF", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;

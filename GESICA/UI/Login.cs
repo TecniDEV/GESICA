@@ -5,13 +5,13 @@ namespace GESICA.UI
 {
     public partial class Login : Form
     {
-        UserController userController;
-
         public Login()
         {
             userController = new UserController();
             InitializeComponent();
         }
+
+        readonly UserController userController;
 
         private void TextUser_KeyPress(object sender, KeyPressEventArgs e)
         {

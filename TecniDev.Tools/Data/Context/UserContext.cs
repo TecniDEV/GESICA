@@ -21,8 +21,8 @@ namespace TecniDev.Tools.Data.Context
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(32);
                 entity.Property(e => e.Password).IsRequired().HasMaxLength(128);
                 entity.HasOne(e => e.Role).WithMany(r => r.Users);
-                entity.Property<DateTime>("CreatedAt").HasDefaultValue(DateTime.Now);
-                entity.Property<DateTime>("UpdatedAt").HasDefaultValue(DateTime.Now);
+                entity.Property<DateTime>("CreatedAt").HasDefaultValue(DateTime.UtcNow);
+                entity.Property<DateTime>("UpdatedAt").HasDefaultValue(DateTime.UtcNow);
 
             });
 

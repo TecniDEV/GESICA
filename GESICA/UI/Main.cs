@@ -14,7 +14,7 @@ namespace GESICA
         {
             if (SessionHelper.User == null)
             {
-                Login login = new Login();
+                Login login = new();
                 login.ShowDialog();
             }
         }
