@@ -14,8 +14,7 @@ namespace InventoryServiceAPI
                 config.CreateMap<Product, ProductDto>()
                     .ForMember(dto => dto.Category, conf => conf.MapFrom(p => p.Category.Name))
                     .ForMember(dto => dto.Provider, conf => conf.MapFrom(p => p.Provider.Name))
-                    .ForMember(dto => dto.Warehouse, conf => conf.MapFrom(p => p.Warehouse.Name))
-                    .ReverseMap();
+                    .ForMember(dto => dto.Warehouse, conf => conf.MapFrom(p => p.Warehouse.Name));
                 config.CreateMap<Provider, ProviderDto>();
                 config.CreateMap<ProviderDto, Provider>();
                 config.CreateMap<Warehouse, WarehouseDto>();
