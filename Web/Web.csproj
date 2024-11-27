@@ -4,7 +4,6 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <SignAssembly>False</SignAssembly>
     <Authors>TecniDEV</Authors>
     <Product>GESICA</Product>
     <Description>Gestor Empresarial de Información Contable y Administrativa</Description>
@@ -24,6 +23,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
