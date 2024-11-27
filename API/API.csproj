@@ -22,6 +22,10 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Data\Entities\" />
+    <Folder Include="Data\Objects\" />
+    <Folder Include="Helpers\Events\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
