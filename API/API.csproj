@@ -5,6 +5,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <Title>API GESICA</Title>
+    <Authors>TecniDEV</Authors>
+    <Product>GESICA</Product>
+    <Description>API para GESICA</Description>
+    <Copyright>CC0-1.0 </Copyright>
+    <PackageProjectUrl>https://github.com/TecniDEV/GESICA</PackageProjectUrl>
+    <PackageIcon>favicon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/TecniDEV/GESICA</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +22,17 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\Web\wwwroot\favicon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
